@@ -1,18 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    
+let visinaHeadera=$("#header").height();
+let visinaEkrana=$("#latice").height();
+
+let pomerajNaGore=visinaHeadera-visinaEkrana+20;
+
+console.log("visina headera= ",visinaHeadera);
+console.log("visina ekrana= ",visinaEkrana);
+console.log("Pomeraj je za= ",pomerajNaGore);
+
+
+
 ////////////////   ⁡⁢⁣⁣Ovo je kod za testiranje sajta⁡
     // $(".loadDiv").css("display", "none");
     // $(".latice").css("display", "none");
     
     // $(".hero").css("opacity", "1");
-    // $(".mainPanel").css("filter",`none`);
     // localStorage.setItem("brojac","prikazi");
 
 ///////////////////////
 
-    $(".mainPanel").css("opacity","1");
-    $(".loadDiv").css("opacity", "1");
+    
+
 window.addEventListener('load', function () {
     if(this.localStorage.getItem("brojac")=="nePrikazi")
         {
@@ -22,8 +31,18 @@ window.addEventListener('load', function () {
             $(".hero").css("opacity", "1");
             $(".mainPanel").css("filter",`none`);
         
-            $(".mainPanel").css("display","none");
-            console.log("Nesto 2")
+            $(".mainPanel").css({"margin-top":+pomerajNaGore+ "px", "transition-duration":"0s"});
+            $("body").css("overflow-y","visible")
+            $("#header").css("opacity","1");
+
+
+        }
+        else{
+            $("body").css("overflow-y","hidden");
+            $("#header").css("opacity","0");
+            $(".mainPanel").css("opacity","1");
+    $(".loadDiv").css("opacity", "1");
+            // $(".mainPanel").css("opacity","0");
         }
 });
 
@@ -40,7 +59,7 @@ function load() {
     setTimeout(() => {
         $(".latice").css("display","none");
         $(".loadDiv").css("display","none");
-    }, 2000);
+    }, 1500);
 }
 setTimeout(() => {
     load();
@@ -64,7 +83,7 @@ $(document).ready(function() {
 
 
 $("#loadTitle").mouseenter(()=>{
-    $("#loadTitle").css("background-color","var(--boja3)");
+    $("#loadTitle").css("background-color","var(--primary1)");
 })
 
 $("#loadTitle").mouseleave(()=>{
@@ -79,27 +98,40 @@ let dole=$(".dole");
 
 dole.mouseenter(()=>{
     dole.css("transform","scale(150%)")
-    dole.css("background-color","var(--boja3)");
-    $(".strelica").css("color","var(--boja1)");
+    dole.css("background-color","var(--primary1)");
+    $(".strelica").css("color","var(--secondary2)");
     $(".strelica").css("transform","scale(100%)");
 })
 
 dole.mouseleave(()=>{
     dole.css("transform","scale(70%)")
     dole.css("background-color","transparent");
-    $(".strelica").css("color","var(--boja3)");
+    $(".strelica").css("color","var(--primary1)");
     $(".strelica").css("transform","scale(70%)");
 })
 
 dole.click(()=>{
-        $(".mainPanel").css({"margin-top":"-100vh" , "transition-duration":"1.5s"});
+        $(".mainPanel").css({"margin-top":+pomerajNaGore+ "px", "transition-duration":"1.5s"});
+        $("#header").css("opacity","1");
         localStorage.setItem("brojac","nePrikazi");
         setTimeout(() => {
-            $(".mainPanel").css("display","none");
+            // $(".mainPanel").css("display","none");
+            $("body").css("overflow-y","visible")
         }, 2000);
 })
 
-
+$(".galerijaLink").mouseenter(()=>{
+    $(".ostaleGalerije").css("display","flex")
+    setTimeout(() => {
+        $(".ostaleGalerije").css("opacity","1")
+    }, 1);
+})
+$(".galerijaLink").mouseleave(()=>{
+    $(".ostaleGalerije").css("opacity","0")
+    setTimeout(() => {
+        $(".ostaleGalerije").css("display","none")
+    }, 500);
+})
 
 
 
