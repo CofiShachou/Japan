@@ -20,7 +20,9 @@ console.log("Pomeraj je za= ",pomerajNaGore);
 
 ///////////////////////
 
-    
+$("#logo").click(()=>{
+    localStorage.setItem("brojac","prikazi");
+})
 
 window.addEventListener('load', function () {
     if(this.localStorage.getItem("brojac")=="nePrikazi")
