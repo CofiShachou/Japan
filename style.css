@@ -232,6 +232,9 @@ body {
     background-color: var(--secondary2);
     border-radius: 10px;
     max-height: 300px;
+
+    position: fixed;
+    left: 1vw;
 }
 .navigation *{
     color: var(--primary1);
@@ -245,6 +248,7 @@ body {
 }
 .navLista li a{
     font-size: 20px;
+    text-decoration: underline;
 }
 .navNaslov{
     font-size: 30px;
@@ -255,6 +259,7 @@ body {
     width: 84vw;
     border-radius: 10px;
     padding: 1vw;
+    margin: 0vw 9vw;
     background-color: var(--primary1);
 }
 .main *{
@@ -262,21 +267,31 @@ body {
 }
 
 .mainImage{
-    width: 50vw;
+    width: 55vw;
+    height: 30vw;
     /* margin-bottom: 30px; */
-    margin-left: 240px;
+    /* margin-left: 240px; */
     margin-top: 20px;
     border-radius: 10px;
+}
+.mainElement{
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid var(--secondary2);
+    margin-bottom: 50px;
 }
 
 .mainNaslov{
     font-size: 35px;
     text-align: center;
+    text-decoration:wavy;
 }
 .mainText{
     font-size: 20px;
     margin: 20px 0px 50px 0px;
-
+    text-align: center;
+    max-width: 55vw;
 }
 .legenda{
     width: 7vw;
@@ -284,10 +299,19 @@ body {
     background-color: var(--secondary2);
     border-radius: 10px;
     max-height: 300px;
+
+    position: fixed;
+    right: 1vw;
 }
 .legenda *{
     color: var(--primary1);
 }
 .zastava{
     width: 7vw;
+}
+
+
+.fv{
+    width: 100vw;
+    height: 100vh;
 }
