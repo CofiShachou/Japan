@@ -7,7 +7,7 @@
     margin: 0px;
     border: 0px;
     outline: 0px;
-    list-style-type: none;
+    /* list-style-type: none; */
     text-decoration: none;
     color: black;
     transition-duration: 0.5s;
@@ -114,7 +114,7 @@ body {
     align-items: center;
     justify-content: center;
     border: 5px solid var(--primary1);
-    border-radius: 100%;
+    border-radius: 50%;
     transform: scale(70%);
     width: 3vw;
     height: 3vw;
@@ -191,11 +191,11 @@ body {
     opacity: 0;
     display: none;
 
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 0px 0px 10px 10px;
     background-color: var(--secondary2);
 }
 .ostaleGalerije a:last-child{
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 0px 0px 10px 10px;
 }
 .galerijaLink:hover {
     display: flex;
@@ -209,4 +209,85 @@ body {
     box-shadow: 2px 2px 10px var(--primary1),
     -2px -2px 10px var(--primary1);
     color: var(--secondary2);
+    
+}
+
+.linkovi>a:hover, .linkovi .galerijaLink>a:hover{
+    transform: scale(110%);
+    text-shadow: 1px 1px 10px var(--primary1),
+    -1px -1px 10px var(--primary1);
+}
+
+
+.wrap{
+    display: flex;
+    gap: 20px;
+    padding: 0vw 2vw;
+    margin-top: 20px;
+}
+
+.navigation{
+    width: 7vw;
+    padding: 20px;
+    background-color: var(--secondary2);
+    border-radius: 10px;
+    max-height: 300px;
+}
+.navigation *{
+    color: var(--primary1);
+    
+}
+.navLista{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+}
+.navLista li a{
+    font-size: 20px;
+}
+.navNaslov{
+    font-size: 30px;
+    text-align: center;
+}
+
+.main{
+    width: 84vw;
+    border-radius: 10px;
+    padding: 1vw;
+    background-color: var(--primary1);
+}
+.main *{
+    color: var(--secondary2);
+}
+
+.mainImage{
+    width: 50vw;
+    /* margin-bottom: 30px; */
+    margin-left: 240px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.mainNaslov{
+    font-size: 35px;
+    text-align: center;
+}
+.mainText{
+    font-size: 20px;
+    margin: 20px 0px 50px 0px;
+
+}
+.legenda{
+    width: 7vw;
+    padding: 20px;
+    background-color: var(--secondary2);
+    border-radius: 10px;
+    max-height: 300px;
+}
+.legenda *{
+    color: var(--primary1);
+}
+.zastava{
+    width: 7vw;
 }
