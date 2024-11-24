@@ -145,7 +145,7 @@ body {
     padding: 10px 10px;
 
     /* box-sizing: border-box; */
-
+    
     opacity: 1;
 }
 
@@ -174,6 +174,9 @@ body {
     flex-direction: column;
     text-align: center;
 }
+.galerijaLink a{
+    z-index: 3;    
+}
 
 .ostaleGalerije{
     display: flex;
@@ -189,6 +192,7 @@ body {
     opacity: 0;
     display: none;
 
+    z-index: 1;
     border-radius: 0px 0px 10px 10px;
     background-color: var(--secondary2);
 }
@@ -218,8 +222,8 @@ body {
 
 
 .wrap{
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
     /* gap: 20px; */
     /* padding: 0vw 2vw; */
     margin-top: 20px;
@@ -242,20 +246,22 @@ body {
 .navLista{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
     padding: 20px;
     list-style-type: none;
 }
 .navLista li p{
     font-size: 20px;
+    /* padding-bottom: 10px; */
     display: inline-block;
-    /* text-decoration: underline; */
+    /* background-color: red; */
 }
-.navLista li i{
-    /* font-size: 20px; */
+.pb{
+    padding-bottom: 5px;
 }
 .navLista li p::after{
     content: "";
+    position: relative;
     display: flex;
     background-color: var(--primary1);
     width: 10%;
@@ -264,6 +270,7 @@ body {
 }
 .navLista li p:hover::after{
     content: "";
+    
     display: flex;
     background-color: var(--primary1);
     width: 0%;
@@ -283,10 +290,13 @@ body {
 }
 
 .main{
-    width: 75vw;
+    width: 80vw;
     border-radius: 10px;
     padding: 1vw;
-    /* margin: 0vw 10vw; */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-left:13vw;
     background-color: var(--primary1);
 }
 .main *{
@@ -308,7 +318,6 @@ body {
     border-bottom: 2px solid var(--secondary2);
     margin-bottom: 50px;
 }
-
 .mainNaslov{
     font-size: 35px;
     text-align: center;
@@ -321,22 +330,26 @@ body {
     max-width: 55vw;
 }
 .legenda{
-    width: 7vw;
+    width: 20%;
     padding: 20px;
     background-color: var(--secondary2);
     border-radius: 10px;
     max-height: 300px;
 
-    position: fixed;
-    right: 1vw;
+    /* position: absolute; */
+    /* right: 1vw; */
 }
 .legenda *{
     color: var(--primary1);
 }
 .zastava{
-    width: 7vw;
+    width: 9vw;
 }
-
+.zastavaDiv{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
 
 .fv{
     width: 100vw;
@@ -345,4 +358,138 @@ body {
 
 .gore{
     transform: translateY(-5px);
+}
+
+.red{
+    display: flex;
+    gap: 10px;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.stepen{
+    margin-left: -10px;
+}
+.legenda p{
+    font-size: 20px;
+
+}
+.legendaName{
+    font-weight: bold;
+}
+
+/* ////////////////////// ⁡⁢⁣⁣Galerija⁡ */
+
+.galerijaWrap{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.galerijaMain{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.galerijaRed{
+    display: flex;
+    gap: 20px;
+}
+.galerijaBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary2);
+    padding: 1vw;
+    border-radius: 10px;
+}
+.galerijaBlock a{
+    font-size: 30px;
+    color: var(--primary1);
+    margin-bottom: 30px;
+}
+.galerijaBlock p{
+    font-size: 20px;
+    color: var(--primary1);
+    margin-bottom: 10px;
+    text-align: center;
+}
+.miniSlika{
+    width: 15vw;
+}
+/* /////////////////////////   ⁡⁢⁣⁣Prijava⁡ */
+
+
+
+.sideSlika{
+    margin-top: 50px;
+}
+.prijavaSideSlika{
+    width: 25vw;
+    height: 40vw;
+}
+.sideL{
+    border-radius: 0px 10px 10px 0px;
+}
+.sideD{
+    border-radius: 10px 0px 0px 10px;
+}
+.prijavaWrap{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    gap: 2vw;
+    padding-top: 20px;
+}
+.prijavaMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary2);
+    border-radius: 10px;
+    padding: 1vw;
+}
+.prijavaMain>p{
+    font-size: 30px;
+    color: var(--primary1);
+}
+
+.prijavaMainDole{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.prijavaMainDole>p{
+    font-size: 20px;
+    color: var(--primary1);
+    
+
+}
+
+.formDiv{
+    margin-top: 20px;
+    background-color: var(--primary1);
+    padding: 1vw;
+    border-radius: 10px;
+}
+form label{
+    font-size:20px;
+    color: var(--secondary2);
+}
+form input{
+    background-color: var(--secondary2);
+    color: var(--primary1);
+    max-width: 10vw;
+    font-size: 20px;
+    padding:0.3vw;
+}
+.telefon{
+    max-width: 5vw;
+}
+.submit{
+    padding: 0.3vw 0.8vw;
+    border-radius: 10px;
 }

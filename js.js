@@ -36,13 +36,20 @@ window.addEventListener('load', function () {
         
             $(".mainPanel").css({"margin-top":+pomerajNaGore+ "px", "transition-duration":"0s"});
             $("body").css("overflow-y","visible")
-            $("#header").css("opacity","1");
+            $("#header").css("disaply","flex");
+            setTimeout(() => {
+                $("#header").css("opacity","1");
+            }, 10);
+
 
 
         }
         else{
             $("body").css("overflow-y","hidden");
             $("#header").css("opacity","0");
+            setTimeout(() => {
+                $("#header").css("disaply","none");
+            }, 500);
             $(".mainPanel").css("opacity","1");
             $(".loadDiv").css("opacity", "1");  
             window.scrollTo(0,0);
@@ -67,15 +74,15 @@ function load() {
 }
 setTimeout(() => {
     load();
-}, 7000);
+}, 10000);
 
 
 //////// ⁡⁢⁣⁣𝗢𝘃𝗼 𝘃𝗿𝗮𝗰𝗮 𝗴𝗶𝗳 𝗻𝗮 𝗽𝗼𝗰𝗲𝘁𝗮𝗸 𝗸𝗮𝗱𝗮 𝗿𝗲𝗳𝗿𝗲𝘀𝘂𝗷𝗲𝗺 𝘀𝘁𝗿𝗮𝗻𝗶𝗰𝘂 ⁡
 $(document).ready(function() {
-  var gifElement = $("#latice");
-  var timestamp = new Date().getTime(); // trenutno vreme u milisekundama
-  var noviSrc = gifElement.attr('src') + '?' + timestamp;
-  gifElement.attr('src', noviSrc);
+//   var gifElement = $("#latice");
+//   var timestamp = new Date().getTime(); // trenutno vreme u milisekundama
+//   var noviSrc = gifElement.attr('src') + '?' + timestamp;
+//   gifElement.attr('src', noviSrc);
 });
 ///////////////////////////////////////////////////////////////////// 
 
@@ -150,7 +157,12 @@ $(".clickScroll").click(function(){
     }
 })
 
+//////////////////  ⁡⁢⁣⁣Galerija⁡
 
+$(".galerijaWrap").css("margin-top",visinaHeadera+20);
 
+/////////////////// ⁡⁢⁣⁣Prijava⁡
+
+$(".prijavaWrap").css("margin-top",visinaHeadera+20);
 
 });
