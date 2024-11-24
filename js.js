@@ -17,6 +17,7 @@ console.log("Pomeraj je za= ",pomerajNaGore);
     
     // $(".hero").css("opacity", "1");
     // localStorage.setItem("brojac","prikazi");
+    
 
 ///////////////////////
 
@@ -43,7 +44,8 @@ window.addEventListener('load', function () {
             $("body").css("overflow-y","hidden");
             $("#header").css("opacity","0");
             $(".mainPanel").css("opacity","1");
-    $(".loadDiv").css("opacity", "1");
+            $(".loadDiv").css("opacity", "1");  
+            window.scrollTo(0,0);
             // $(".mainPanel").css("opacity","0");
         }
 });
@@ -134,6 +136,20 @@ $(".galerijaLink").mouseleave(()=>{
         $(".ostaleGalerije").css("display","none")
     }, 500);
 })
+
+////////////// Dodavanje skrola na dole za home
+
+$(".clickScroll").click(function(){
+    switch ($(this).text()){
+        case "Opste":window.scrollTo(0,$("#opste").offset().top-140);break;
+        case "Geografski polozaj":window.scrollTo(0,$("#gp").offset().top-140);break;
+        case "Reljef":window.scrollTo(0,$("#reljef").offset().top-140);break;
+        case "Istorija":window.scrollTo(0,$("#istorija").offset().top-140);break;
+        case "Hrana":window.scrollTo(0,$("#hrana").offset().top-140);break;
+        case "Kultura":window.scrollTo(0,$("#kultura").offset().top-140);break;
+    }
+})
+
 
 
 
