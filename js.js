@@ -157,12 +157,17 @@ $(".clickScroll").click(function(){
     }
 })
 
-//////////////////  ⁡⁢⁣⁣Galerija⁡
+//////////////////  ⁡⁢⁣⁣Galerija⁡    ///////////////////
 
 $(".galerijaWrap").css("margin-top",visinaHeadera+20);
 
-/////////////////// ⁡⁢⁣⁣Prijava⁡
+/////////////////// ⁡⁢⁣⁣Prijava⁡    ///////////////////
 
 $(".prijavaWrap").css("margin-top",visinaHeadera+20);
+
+
+//////////////////// ⁡⁢⁣⁣O Autoru⁡    ///////////////////
+$(".oWrap").css("margin-top",visinaHeadera+20);
+
 
 });
