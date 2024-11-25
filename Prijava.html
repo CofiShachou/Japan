@@ -55,21 +55,32 @@
                 <div class="prijavaMainDole">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, dolores!</p>
                     <div class="formDiv">
+                      <div class="opis"> 
+                        <ul>
+                          <li><p>Nesto</p></li>
+                          <li><p>Nesto</p></li>
+                          <li><p>Nesto</p></li>
+                          <li><p>Nesto</p></li>
+                          <li><p>Nesto</p></li>
+                        </ul>
+                      </div>
                         <form action="">
-                            <label for="ime">Ime: </label>
-                            <input type="text" name="ime" id="ime" required="required">
+                              <div class="prijavaCol">
+                                <label for="ime">Ime: </label>
+                                <input type="text" name="ime" id="ime" required="required">
 
-                            <label for="prezime">Lozinka: </label>
-                            <input type="password" name="lozinka" id="lozinka" required="required">
-
-                            <label for="email">Email: </label>
-                            <input type="email" name="email" id="email" required="required">
-
-
-                            <label for="telefon">Broj telefona: </label>
-                            <input type="tel" name="telefon" id="telefon" class="telefon" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required="required">
-
+                                <label for="prezime">Prezime: </label>
+                                <input type="text" name="prezime" id="prezime" required="required">
+    
+                                
+                                <label for="email">Email: </label>
+                                <input type="email" name="email" id="email" required="required">
+                                
+                                <label for="telefon">Broj telefona: </label>
+                                <input type="tel" name="telefon" id="telefon" class="telefon" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required="required">
+                              </div>
                             <input type="submit" name="submit" id="submit" class="submit">
+
                         </form>
                     </div>
 
@@ -107,11 +118,18 @@
             </div>
 
             <div class="ikonice">
-              <a href="https://www.instagram.com/japandailies/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://www.facebook.com/JapanGov/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="https://sr.wikipedia.org/sr-ec/%D0%88%D0%B0%D0%BF%D0%B0%D0%BD"><i class="fa-brands fa-wikipedia-w" target="_blank"></i></a>
+              <p>Linkovi:</p>
+              <div class="red">
+                <a href="https://www.instagram.com/japandailies/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/JapanGov/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://sr.wikipedia.org/sr-ec/%D0%88%D0%B0%D0%BF%D0%B0%D0%BD"><i class="fa-brands fa-wikipedia-w" target="_blank"></i></a>
+              </div>
             </div>
         </div>
+
+
+
+    </div>
 
     <script src="js.js"></script>
 </body>

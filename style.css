@@ -453,15 +453,16 @@ body {
     background-color: var(--secondary2);
     padding: 3vw;
 }
-.footer div{
-    background-color: var(--primary1);
+.footerGalerije, .footerHeader, .footerContact{
+    /* background-color: var(--primary1); */
+    border: 2px solid var(--primary1);
     padding: 0.5vw;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
 }
 .footer div a,p{
-    color: var(--secondary2);
+    color: var(--primary1);
     font-size: 25px;
 }
 .footer div a::before{
@@ -472,7 +473,7 @@ body {
     content: "";
     position: relative;
     display: flex;
-    background-color: var(--secondary2);
+    background-color: var(--primary1);
     width: 10%;
     height: 2px;
     transition-duration:1s ;
@@ -480,17 +481,34 @@ body {
 
 .footer div a:hover::after{
     content: "";
-    background-color: var(--secondary2);
+    background-color: var(--primary1);
     width: 100%;
 }
-.footer .ikonice{
-    background-color: var(--secondary2);
-    display: flex;
-    flex-direction: row;
-    gap: 1vw;
+.footer div a::before{
+    content: "";
+    /* font-family: 'Font Awesome 5 Free'; */
 }
-.ikonice{
+.footer .ikonice a::after{
+    content: "";
+    position: relative;
+    display: flex;
+    background-color: var(--primary1);
+    width: 10px;
+    height: 2px;
+    transition-duration:1s ;
+}
+.footer .ikonice{
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 2vw;
+    gap: 1vw;
+    border: 2px solid var(--primary1);
+    border-radius: 10px;
+}
+.lpad{
+    display: flex;
 }
 .ikonice i{
     color: var(--primary1);
@@ -541,6 +559,7 @@ body {
     background-color: var(--secondary2);
     border-radius: 10px;
     padding: 1vw;
+    text-align: center;
 }
 .prijavaMain>p{
     font-size: 30px;
@@ -551,7 +570,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 5vw;
 }
 .prijavaMainDole>p{
     font-size: 20px;
@@ -562,10 +581,36 @@ body {
 
 .formDiv{
     margin-top: 20px;
+    padding: 1vw;
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.opis{
     background-color: var(--primary1);
     padding: 1vw;
     border-radius: 10px;
+    width: 10vw;
+    
 }
+.opis ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1vw;
+    height: 100%;
+}
+.opis ul li p::before{
+    content: "\23";
+}
+.opis ul li p{
+    font-size: 25px;
+    color: var(--secondary2);
+}
+
+
 form label{
     font-size:20px;
     color: var(--secondary2);
@@ -577,6 +622,20 @@ form input{
     font-size: 20px;
     padding:0.3vw;
 }
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--primary1);
+    padding:0.3vw 2vw;
+    border-radius: 10px;
+
+}
+.prijavaCol{
+    display: flex;
+    flex-direction: column;
+}
+
 .telefon{
     max-width: 5vw;
 }
@@ -584,6 +643,7 @@ form input{
     padding: 0.3vw 0.8vw;
     border-radius: 10px;
 }
+
 /* ////////////////////////    ⁡⁢⁣⁣O autoru⁡ */
 
 .oWrap{
