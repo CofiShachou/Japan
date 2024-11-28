@@ -26,8 +26,8 @@
   
             <div class="linkovi">
               <a href="index.html">Home</a>
-              <div class="galerijaLink">
-                <a href="Galerija.html">Galerija</a>
+              <div class="galerijaLink" >
+                <a href="#">Galerija</a>
                 <div class="ostaleGalerije">
                   <a href="">Tokyo</a>
                   <a href="">Osaka</a>
@@ -43,13 +43,13 @@
             <div>
               <img src="images/yingYang.png" alt="Logo sajta" id="logo2" class="logo rot2">
             </div>
-            
+
             <div class="login">
               <button class="odjava" id="odjava">Odjava</button>
               <button class="logBtn" id="logBtn">Prijavi se</button>
               <i class="fa-regular fa-circle-user logIcon" id="logIcon"></i>
               <p class="logUser" id="logUser">Filip</p>
-            </div>
+              </div>
           
         </div>
 
@@ -61,34 +61,22 @@
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, accusamus!</p>
                 <div class="prijavaMainDole">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, dolores!</p>
-                    <div class="formDiv">
-                      <div class="opis"> 
-                        <ul>
-                          <li><p>Nesto</p></li>
-                          <li><p>Nesto</p></li>
-                          <li><p>Nesto</p></li>
-                          <li><p>Nesto</p></li>
-                          <li><p>Nesto</p></li>
-                        </ul>
-                      </div>
+                    <div class="formDivLog">
+                      
                         <form action="">
                               <div class="prijavaCol">
-                                <label for="ime">Ime: </label>
-                                <input type="text" name="ime" id="ime" required="required">
+                                <label for="username">Korisničko ime: </label>
+                                <input type="text" name="username" id="usernameL" required="required">
 
-                                <label for="prezime">Prezime: </label>
-                                <input type="text" name="prezime" id="prezime" required="required">
-    
+                                <label for="password">Lozinka: </label>
+                                <input type="password" name="password" id="passwordL" required="required">
                                 
                                 <label for="email">Email: </label>
-                                <input type="email" name="email" id="email" required="required">
-                                
-                                <label for="telefon">Broj telefona: </label>
-                                <input type="tel" name="telefon" id="telefon" class="telefon" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required="required">
+                                <input type="email" name="email" id="emailL" required="required">
                               </div>
-                            <input type="submit" name="submit" id="submit" class="submit">
-
-                        </form>
+                              
+                            </form>
+                            <button class="prijava" id="prijava">Prijavi se</button>
                     </div>
 
                 </div>
@@ -99,44 +87,6 @@
         </div>
 
 
-        <div class="footer">
-          <div class="footerHeader">
-            <p class="footerNav">Navigacija:</p>
-            <a href="index.html">Home</a>
-            <a href="Galerija.html" class="galerija">Galerija</a>
-            <a href="Prijava.html">Prijava</a>
-            <a href="O autoru.html">O autoru</a>
-          </div>
-
-            <div class="footerGalerije">
-              <p class="footerNav">Galerija: </p>
-              <a href="">Tokyo</a>
-              <a href="">Osaka</a>
-              <a href="">Nagoya</a>
-              <a href="">Kyoto</a>
-              <a href="">Yokohama</a>
-            </div>
-
-            <div class="footerContact">
-              <p>Ime: Filip</p>
-              <p>Prezime: Savić</p>
-              <p>Privatni email: filipsavic230@gmail.com</p>
-              <p>Školski email: filip.savic.81.24@ict.edu.rs</p>
-            </div>
-
-            <div class="ikonice">
-              <p>Linkovi:</p>
-              <div class="red">
-                <a href="https://www.instagram.com/japandailies/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.facebook.com/JapanGov/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://sr.wikipedia.org/sr-ec/%D0%88%D0%B0%D0%BF%D0%B0%D0%BD"><i class="fa-brands fa-wikipedia-w" target="_blank"></i></a>
-              </div>
-            </div>
-        </div>
-
-
-
-    </div>
 
     <script src="js.js"></script>
 </body>

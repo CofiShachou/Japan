@@ -55,6 +55,16 @@ window.addEventListener('load', function () {
             window.scrollTo(0,0);
             // $(".mainPanel").css("opacity","0");
         }
+
+
+        if(localStorage.getItem("username")!= "" && localStorage.getItem("password")!= "" && localStorage.getItem("mail")!= "")
+        {
+            $("#logBtn").css("display","none")
+
+            $("#logUser").text(localStorage.getItem("username"))
+            $("#logUser").css("display","block")
+            $("#odjava").css("display","block")
+        }
 });
 
 
@@ -171,3 +181,47 @@ $(".oWrap").css("margin-top",visinaHeadera+20);
 
 
 });
+
+
+////////////////////  ⁡⁢⁣⁣LogIn⁡      /////////////////
+
+$("#logBtn").click(()=>{
+    window.location="login.html";
+})
+let usernameC,passwordC,mailC,nis="";
+$("#prijava").click(()=>{
+    if($("#usernameL").val()!="" && $("#passwordL").val()!="" && $("#emailL").val()!="")
+    {
+        usernameC=$("#usernameL").val();
+        passwordC=$("#passwordL").val();
+        mailC=$("#emailL").val();
+    
+        localStorage.setItem("username",usernameC)
+        localStorage.setItem("password",passwordC)
+        localStorage.setItem("mail",mailC)
+        
+    
+        
+        console.log("Username je: "+localStorage.getItem("username"));
+        console.log("Password je: "+localStorage.getItem("password"));
+        console.log("Mail je: "+localStorage.getItem("mail"));
+
+
+        $("#usernameL").val("");
+        $("#passwordL").val("");
+        $("#emailL").val("");
+
+        location="index.html"
+    }
+    else{
+        console.log("Unesi"); 
+    }
+})
+$("#odjava").click(()=>{
+    localStorage.setItem("username",nis)
+    localStorage.setItem("password",nis)
+    localStorage.setItem("mail",nis)
+
+    location.reload();
+})
+
