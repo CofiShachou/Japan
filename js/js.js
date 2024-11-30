@@ -5,9 +5,6 @@ let visinaEkrana=$("#latice").height();
 
 let pomerajNaGore=visinaHeadera-visinaEkrana+20;
 
-console.log("visina headera= ",visinaHeadera);
-console.log("visina ekrana= ",visinaEkrana);
-console.log("Pomeraj je za= ",pomerajNaGore);
 
 //////////////////// ⁡⁢⁣⁡⁢⁣⁣Mini Galerije⁡⁡⁡    ///////////////////
 $(".miniGalerijaWrap").css("margin-top",visinaHeadera+40);
@@ -58,11 +55,13 @@ window.addEventListener('load', function () {
             // $(".mainPanel").css("opacity","0");
         }
 
-
-        if(localStorage.getItem("username")!= "" && localStorage.getItem("password")!= "" && localStorage.getItem("mail")!= "")
+        if (localStorage.getItem("username") === null) {
+            localStorage.setItem("username", ""); 
+        }
+        if(localStorage.getItem("username")!= "")
         {
+            
             $("#logBtn").css("display","none")
-
             $("#logUser").text(localStorage.getItem("username"))
             $("#logUser").css("display","block")
             $("#odjava").css("display","block")
@@ -192,12 +191,20 @@ $("#logBtn").click(()=>{
 })
 let usernameC,passwordC,mailC,nis="";
 $("#prijava").click(()=>{
-    if($("#usernameL").val()!="" && $("#passwordL").val()!="" && $("#emailL").val()!="")
+    if($("#usernameL").val() != "")
     {
         usernameC=$("#usernameL").val();
         passwordC=$("#passwordL").val();
         mailC=$("#emailL").val();
     
+        
+        
+        console.log("=== "+passwordC);
+        console.log("=== "+passwordC);
+        console.log("=== "+mailC);
+
+
+
         localStorage.setItem("username",usernameC)
         localStorage.setItem("password",passwordC)
         localStorage.setItem("mail",mailC)
@@ -207,22 +214,28 @@ $("#prijava").click(()=>{
         $("#emailL").val("");
 
         location="index.html"
+        console.log("PRVI");
+        
+        
     }
     else{
-        if($("#usernameL").val()=="")
-        $("#usernameL").css("outline","1px solid red");
-        else
-        $("#usernameL").css("outline","0px solid red");
-
-        if($("#passwordL").val()=="")
-        $("#passwordL").css("outline","1px solid red");
-        else
-        $("#passwordL").css("outline","0px solid red");
-
-        if($("#emailL").val()=="")
-        $("#emailL").css("outline","1px solid red");
-        else
-        $("#emailL").css("outline","0px solid red");
+            if($("#usernameL").val()=="")
+            $("#usernameL").css("outline","1px solid red");
+            else
+            $("#usernameL").css("outline","0px solid red");
+    
+            if($("#passwordL").val()=="")
+            $("#passwordL").css("outline","1px solid red");
+            else
+            $("#passwordL").css("outline","0px solid red");
+    
+            if($("#emailL").val()=="")
+            $("#emailL").css("outline","1px solid red");
+            else
+            $("#emailL").css("outline","0px solid red");
+        console.log("DRUGI");
+        
+        
     }
 })
 $("#odjava").click(()=>{
@@ -232,8 +245,6 @@ $("#odjava").click(()=>{
 
     location.reload();
 
-
-    
 })
 
 
