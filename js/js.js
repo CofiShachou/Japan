@@ -13,10 +13,10 @@ console.log("Pomeraj je za= ",pomerajNaGore);
 $(".miniGalerijaWrap").css("margin-top",visinaHeadera+40);
 
 ////////////////   ⁡⁢⁣⁣Ovo je kod za testiranje sajta⁡
-    $(".loadDiv").css("display", "none");
-    $(".latice").css("display", "none");
+    // $(".loadDiv").css("display", "none");
+    // $(".latice").css("display", "none");
     
-    $(".hero").css("opacity", "1");
+    // $(".hero").css("opacity", "1");
     // localStorage.setItem("brojac","prikazi");
     
 
