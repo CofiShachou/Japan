@@ -170,6 +170,17 @@ input{
     transition-duration: 0s;
 }
 
+::-webkit-scrollbar{
+    background-color: var(--secondary2);
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--secondary1);
+    width: 5px;
+}
+
+
+
 .linkovi{
     display: flex;
     gap: 20px;
