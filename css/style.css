@@ -35,7 +35,7 @@ body {
 }
 
 .mainPanel{
-    background-image: url(images/pozadina.jpg);
+    background-image: url(../images/pozadina.jpg);
     background-size: 100vw 100vh;
     width: 100vw;
     height: 100vh;
@@ -62,13 +62,14 @@ body {
 
     opacity: 0;
 }
-.loadTitle p{
+.loadTitle h1{
     color: var(--secondary2);
     font-size: 60px;
     text-shadow: 
     2px 2px 5px var(--primary1),
     -2px -2px 5px var(--primary1);
 }
+
 .loadTitle{
     display: flex;
     justify-content: center;
@@ -165,7 +166,9 @@ body {
 @keyframes rotate2{
     100%{transform: rotate(-360deg);}
 }
-
+input{
+    transition-duration: 0s;
+}
 
 .linkovi{
     display: flex;
@@ -235,13 +238,13 @@ body {
 }
 .ostaleGalerije a:last-child{
     border-radius: 0px 0px 10px 10px;
+    border-bottom: 2px solid var(--primary1);
 }
-.galerijaLink:hover {
-    display: flex;
-    opacity: 1;
-}
+
 .ostaleGalerije a{
     padding: 10px;
+    border-left: 2px solid var(--primary1);
+    border-right: 2px solid var(--primary1);
 }
 .ostaleGalerije a:hover{
     background-color: var(--primary1);
@@ -437,6 +440,7 @@ body {
     cursor: pointer;
     background-color: var(--primary1);
     color: var(--secondary2);
+    transform: scale(110%);
 }
 .logBtn:active{
     transform: scale(90%);
@@ -470,11 +474,13 @@ body {
     background-color: var(--secondary2);
     padding: 1vw;
     border-radius: 10px;
+    width: 20vw;
 }
 .galerijaBlock a{
     font-size: 30px;
     color: var(--primary1);
     margin-bottom: 30px;
+    text-decoration: underline;
 }
 .galerijaBlock p{
     font-size: 20px;
@@ -483,7 +489,7 @@ body {
     text-align: center;
 }
 .miniSlika{
-    width: 13vw;
+    width: 14vw;
 }
 
 .footer{
@@ -531,12 +537,11 @@ body {
 }
 .footer .ikonice a::after{
     content: "";
-    position: relative;
-    display: flex;
-    background-color: var(--primary1);
-    width: 10px;
-    height: 2px;
-    transition-duration:1s ;
+    width: 0px;
+}
+.footer .ikonice a:hover::after{
+    content: "";
+    width: 0px;
 }
 .footer .ikonice{
     display: flex;
@@ -558,6 +563,7 @@ body {
 .footerNav{
     font-size: 30px;
     margin-bottom: 15px;
+    font-weight: bold;
 }
 .footer .footerContact{
     padding-top: 1.5vw;
@@ -569,7 +575,7 @@ body {
 
 
 
-/* /////////////////////////   ⁡⁢⁣⁣Prijava⁡ */
+/* /////////////////////////   ⁡⁢⁣⁣Obavestenja⁡ */
 
 
 
@@ -599,12 +605,15 @@ body {
     align-items: center;
     background-color: var(--secondary2);
     border-radius: 10px;
-    padding: 1vw;
+    padding: 1vw 8vw;
     text-align: center;
 }
-.prijavaMain>p{
-    font-size: 30px;
+.prijavaMain>h1{
+    font-size: 40px;
     color: var(--primary1);
+}
+.prijavaMain input{
+    margin-bottom: 10px;
 }
 
 .prijavaMainDole{
@@ -612,6 +621,9 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 5vw;
+}
+.prijavaMainDole>p{
+    font-size: 30px;
 }
 .prijavaMainDole>p{
     font-size: 20px;
@@ -636,11 +648,12 @@ body {
     width: 100%;
     justify-content: center;
 }
+
 .opis{
     background-color: var(--primary1);
     padding: 1vw;
     border-radius: 10px;
-    width: 10vw;
+    /* width: 10vw; */
     
 }
 .opis ul{
@@ -658,7 +671,9 @@ body {
     font-size: 25px;
     color: var(--secondary2);
 }
-
+.opisNav{
+    font-weight: bold;
+}
 
 form label{
     font-size:20px;
@@ -695,7 +710,8 @@ form{
     color: var(--primary1);
     font-size: 20px;
     padding:0.3vw;
-}.logUser{
+}
+.logUser{
     font-size: 20px;
     display: none;
 }
@@ -715,6 +731,11 @@ form{
     cursor: pointer;
     background-color: var(--primary1);
     color: var(--secondary2);
+    transform: scale(110%);
+}
+.odjava:active{
+    transform: scale(90%);
+    transition-duration: 0.2s;
 }
 /* ////////////////////////    ⁡⁢⁣⁣O autoru⁡ */
 
@@ -760,4 +781,81 @@ form{
     color: var(--primary1);
     text-align: center;
     width: 50vw;
+}
+
+
+
+/* ////////////////////////   ⁡⁢⁣⁣LogIn⁡  ////////// */
+
+.formDivLogLog{
+    margin-top: 20px;
+    padding: 2vw;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 2vw;
+}
+
+.prijavaLog{
+    padding: 0.3vw 0.8vw;
+    border-radius: 10px;
+    background-color: var(--secondary2);
+    color: var(--primary1);
+    font-size: 20px;
+    padding:0.3vw;
+    border: 2px solid var(--primary1);
+}
+
+
+.prijavaLog:hover{
+    box-shadow: 2px 2px 10px var(--primary1),
+    -2px -2px 10px var(--primary1);;
+    cursor: pointer;
+    background-color: var(--primary1);
+    color: var(--secondary2);
+    transform: scale(110%);
+}
+.prijavaLog:active{
+    transform: scale(90%);
+    transition-duration: 0.2s;
+}
+
+
+/* /////////////////   ⁡⁢⁣⁣Mini Galerije⁡ //////////////// */
+
+.miniGalerijaWrap{
+    padding: 2vw 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary2);
+    margin: 1vw;
+    border-radius: 10px;
+}
+.miniGalerijaText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.miniGalerijaText h1{
+    font-size: 50px;
+    color: var(--primary1);
+}
+.miniGalerijaText p{
+    width: 70vw;
+    margin: 2vw 0vw;
+}
+.miniGalerijaSlike{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+.miniGalerijaSlika{
+    width: 22vw;
+    height: 12vw;
+    border-radius: 10px;
+
 }

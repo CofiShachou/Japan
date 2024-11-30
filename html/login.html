@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stranica za prijavu na korisnički nalog</title>
+    <meta name="description" content="Prijavite se na svoj nalog koristeći svoje ime, lozinku i email radi čuvanja svojih podataka i lakse navigacije unutar sajta." >
     
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
@@ -15,107 +16,96 @@
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
         <div class="header" id="header">
           
             <div>
-              <img src="images/yingYang.png" alt="Logo sajta"  class="logo rot1">
+              <img src="../images/yingYang.png" alt="Logo sajta"  class="logo rot1">
             </div>
   
             <div class="linkovi">
               <a href="index.html">Home</a>
               <div class="galerijaLink">
-                <a href="Galerija.html">Galerija</a>
-                <div class="ostaleGalerije">
-                  <a href="">Tokyo</a>
-                  <a href="">Osaka</a>
-                  <a href="">Nagoya</a>
-                  <a href="">Kyoto</a>
-                  <a href="">Yokohama</a>
+                <a href="Galerija.html" class="galerija">Galerija</a>
+                <div class="ostaleGalerije" >
+                  <a href="tokyo.html">Tokyo</a>
+                  <a href="osaka.html">Osaka</a>
+                  <a href="kyoto.html">Kyoto</a>
+                  <a href="mountFuji.html">Mount Fuji</a>
+                  <a href="okinawa.html">Okinawa</a>
+                  <a href="yakushima.html">Yakushima</a>
                 </div>
               </div>
-              <a href="Prijava.html">Prijava</a>
+              <a href="Obavestenja.html">Obaveštenja</a>
               <a href="O autoru.html">O autoru</a>
             </div>
 
             <div>
-              <img src="images/yingYang.png" alt="Logo sajta" id="logo2" class="logo rot2">
+              <img src="../images/yingYang.png" alt="Logo sajta" id="logo2" class="logo rot2">
             </div>
-            
+
             <div class="login">
               <button class="odjava" id="odjava">Odjava</button>
               <button class="logBtn" id="logBtn">Prijavi se</button>
               <i class="fa-regular fa-circle-user logIcon" id="logIcon"></i>
               <p class="logUser" id="logUser">Filip</p>
-            </div>
+              </div>
           
         </div>
 
         <div class="prijavaWrap">
             <div>
-                <img src="images/JapanL.jpg" alt="Slika Japana" class="prijavaSideSlika sideL">
+                <img src="../images/JapanL.jpg" alt="Slika Japana" class="prijavaSideSlika sideL">
             </div>
             <div class="prijavaMain">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, accusamus!</p>
+                <h1>Prijavite se na svoj nalog</h1>
                 <div class="prijavaMainDole">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, dolores!</p>
-                    <div class="formDiv">
-                      <div class="opis"> 
-                        <ul>
-                          <li><p>Nesto</p></li>
-                          <li><p>Nesto</p></li>
-                          <li><p>Nesto</p></li>
-                          <li><p>Nesto</p></li>
-                          <li><p>Nesto</p></li>
-                        </ul>
-                      </div>
+                    <p>Prijavljivanjem na svoj nalog pomažete nama da bolje upoznamo posetioce našeg sajta.</p>
+                    <div class="formDivLogLog">
+                      
                         <form action="">
                               <div class="prijavaCol">
-                                <label for="ime">Ime: </label>
-                                <input type="text" name="ime" id="ime" required="required">
+                                <label for="username">Korisničko ime: </label>
+                                <input type="text" name="username" id="usernameL" required="required">
 
-                                <label for="prezime">Prezime: </label>
-                                <input type="text" name="prezime" id="prezime" required="required">
-    
+                                <label for="password">Lozinka: </label>
+                                <input type="password" name="password" id="passwordL" required="required">
                                 
                                 <label for="email">Email: </label>
-                                <input type="email" name="email" id="email" required="required">
-                                
-                                <label for="telefon">Broj telefona: </label>
-                                <input type="tel" name="telefon" id="telefon" class="telefon" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required="required">
+                                <input type="email" name="email" id="emailL" required="required">
                               </div>
-                            <input type="submit" name="submit" id="submit" class="submit">
-
+                              
                         </form>
+                            <button class="prijavaLog" id="prijava">Prijavi se</button>
                     </div>
 
                 </div>
             </div>
             <div>
-                <img src="images/JapanD.jpg" alt="Slika Japana" class="prijavaSideSlika sideD">
+                <img src="../images/JapanD.jpg" alt="Slika Japana" class="prijavaSideSlika sideD">
             </div>
         </div>
-
 
         <div class="footer">
           <div class="footerHeader">
             <p class="footerNav">Navigacija:</p>
             <a href="index.html">Home</a>
             <a href="Galerija.html" class="galerija">Galerija</a>
-            <a href="Prijava.html">Prijava</a>
+            <a href="Obavestenja.html">Obaveštenja</a>
             <a href="O autoru.html">O autoru</a>
           </div>
 
-            <div class="footerGalerije">
-              <p class="footerNav">Galerija: </p>
-              <a href="">Tokyo</a>
-              <a href="">Osaka</a>
-              <a href="">Nagoya</a>
-              <a href="">Kyoto</a>
-              <a href="">Yokohama</a>
-            </div>
+          <div class="footerGalerije">
+            <p class="footerNav">Galerija: </p>
+            <a href="tokyo.html">Tokyo</a>
+            <a href="osaka.html">Osaka</a>
+            <a href="kyoto.html">Kyoto</a>
+            <a href="mountFuji.html">Mount Fuji</a>
+            <a href="okinawa.html">Okinawa</a>
+            <a href="yakushima.html">Yakushima</a>
+          </div>
 
             <div class="footerContact">
               <p>Ime: Filip</p>
@@ -135,10 +125,7 @@
         </div>
 
 
-
-    </div>
-
-    <script src="js.js"></script>
+    <script src="../js/js.js"></script>
 </body>
 </html>
 

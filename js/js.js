@@ -9,7 +9,8 @@ console.log("visina headera= ",visinaHeadera);
 console.log("visina ekrana= ",visinaEkrana);
 console.log("Pomeraj je za= ",pomerajNaGore);
 
-
+//////////////////// ⁡⁢⁣⁡⁢⁣⁣Mini Galerije⁡⁡⁡    ///////////////////
+$(".miniGalerijaWrap").css("margin-top",visinaHeadera+40);
 
 ////////////////   ⁡⁢⁣⁣Ovo je kod za testiranje sajta⁡
     // $(".loadDiv").css("display", "none");
@@ -84,7 +85,7 @@ function load() {
 }
 setTimeout(() => {
     load();
-}, 10000);
+}, 7000);
 
 
 //////// ⁡⁢⁣⁣𝗢𝘃𝗼 𝘃𝗿𝗮𝗰𝗮 𝗴𝗶𝗳 𝗻𝗮 𝗽𝗼𝗰𝗲𝘁𝗮𝗸 𝗸𝗮𝗱𝗮 𝗿𝗲𝗳𝗿𝗲𝘀𝘂𝗷𝗲𝗺 𝘀𝘁𝗿𝗮𝗻𝗶𝗰𝘂 ⁡
@@ -199,13 +200,6 @@ $("#prijava").click(()=>{
         localStorage.setItem("username",usernameC)
         localStorage.setItem("password",passwordC)
         localStorage.setItem("mail",mailC)
-        
-    
-        
-        console.log("Username je: "+localStorage.getItem("username"));
-        console.log("Password je: "+localStorage.getItem("password"));
-        console.log("Mail je: "+localStorage.getItem("mail"));
-
 
         $("#usernameL").val("");
         $("#passwordL").val("");
@@ -214,7 +208,20 @@ $("#prijava").click(()=>{
         location="index.html"
     }
     else{
-        console.log("Unesi"); 
+        if($("#usernameL").val()=="")
+        $("#usernameL").css("outline","1px solid red");
+        else
+        $("#usernameL").css("outline","0px solid red");
+
+        if($("#passwordL").val()=="")
+        $("#passwordL").css("outline","1px solid red");
+        else
+        $("#passwordL").css("outline","0px solid red");
+
+        if($("#emailL").val()=="")
+        $("#emailL").css("outline","1px solid red");
+        else
+        $("#emailL").css("outline","0px solid red");
     }
 })
 $("#odjava").click(()=>{
@@ -223,5 +230,10 @@ $("#odjava").click(()=>{
     localStorage.setItem("mail",nis)
 
     location.reload();
+
+
+    
 })
+
+
 
