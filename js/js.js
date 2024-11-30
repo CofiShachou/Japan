@@ -24,6 +24,7 @@ $(".miniGalerijaWrap").css("margin-top",visinaHeadera+40);
 
 $("#logo").click(()=>{
     localStorage.setItem("brojac","prikazi");
+    location.reload();
 })
 
 window.addEventListener('load', function () {
