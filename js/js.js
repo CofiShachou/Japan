@@ -112,7 +112,7 @@ $("#loadTitle").mouseleave(()=>{
     $("#loadTitle").css("background-color","transparent");
 })
 $("#loadTitle").click(()=>{
-    window.open("https://github.com/CofiShachou?tab=repositories");
+    window.open("https://maps.app.goo.gl/PReamkEnpXG4xibn6");
 })
 
 
