@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="sr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stranica za prijavu za dobijanje obaveštenja o interesantnim akcijama koje mi pružamo</title>
-    <meta name="descripiton" content="Na ovoj stranici se možete prijaviti sa svojim imenom i porezimenom, brojem teleofna i email-om na koji će te posle dobijati obaveštenja o promocijama i akcijama koje mi organizujemo.">   
-     
+    <title>Informacije o autoru sajta. Ime, prezime i stručna zvanja.</title>
+    <meta name="descripiton" content="Stranica o autoru, na kojoj se nalaze informacije o autoru kao što su ime, prezime, koju srednju školu je autoru završio, koju visoku školu pohađa i na kom smeru.">
+    
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
     crossorigin="anonymous"></script>
@@ -16,14 +16,14 @@
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" href="../images/icon.jpg" alt="icon" />
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="images/icon.jpg" alt="icon" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
         <div class="header" id="header">
           
             <div>
-              <img src="../images/yingYang.png" alt="Logo sajta"  class="logo rot1">
+              <img src="images/yingYang.png" alt="Logo sajta"  class="logo rot1">
             </div>
   
             <div class="linkovi">
@@ -44,62 +44,39 @@
             </div>
 
             <div>
-              <img src="../images/yingYang.png" alt="Logo sajta" id="logo2" class="logo rot2">
+              <img src="images/yingYang.png" alt="Logo sajta" id="logo2" class="logo rot2">
             </div>
-            
+
             <div class="login">
               <button class="odjava" id="odjava">Odjava</button>
               <button class="logBtn" id="logBtn">Prijavi se</button>
               <i class="fa-regular fa-circle-user logIcon" id="logIcon"></i>
               <p class="logUser" id="logUser">Filip</p>
-            </div>
+            </div>`
           
         </div>
 
-        <div class="prijavaWrap">
+
+        <div class="oWrap">
             <div>
-                <img src="../images/JapanL.jpg" alt="Japan" class="prijavaSideSlika sideL">
+                <img src="images/Drvce.png" alt="Sakura" class="sideSlika">
             </div>
-            <div class="prijavaMain">
-                <h1>Prijavite se da bi ste dobijali obaveštenja</h1>
-                <div class="prijavaMainDole">
-                    <p>Nakom prijave vi će te dobijati email-ove i poruke o specijalnim promocijama i akcijama.</p>
-                    <div class="formDiv">
-                      <div class="opis"> 
-                        <ul>
-                          <li><p class="opisNav">Sta možete očekivati:</p></li>
-                          <li><p>Popusti na putovanja</p></li>
-                          <li><p>Zanimljive ponude</p></li>
-                          <li><p>Interesantni obilasci</p></li>
-                        </ul>
-                      </div>
-                        <form action="index.php" method="get">
-                              <div class="prijavaCol">
-                                <label for="ime">Ime: </label>
-                                <input type="text" name="ime" id="ime" required="required">
-
-                                <label for="prezime">Prezime: </label>
-                                <input type="text" name="prezime" id="prezime" required="required">
-    
-                                
-                                <label for="email">Email: </label>
-                                <input type="email" name="email" id="email" required="required">
-                                
-                                <label for="telefon">Broj telefona: </label>
-                                <input type="tel" name="telefon" id="telefon" class="telefon" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required="required">
-                              </div>
-                            <input type="submit" name="submit" id="submit" class="submit">
-
-                        </form>
+            <div class="oMain">
+                <div class="oMainGore">
+                    <img src="images/profilna.jpg" alt="Profilna slika" class="profilna">
+                    <div class="imePrez">
+                        <p>Filip Savić</p>
+                        <p>Internet tehnologije 81.24</p>
                     </div>
-
+                </div>
+                <div class="oMainDole">
+                    <p>Moje ime je Filip Savić, pohađam visoku ICT školu na smeru Internet Tehnoogije. Završio sam srednju elektrotehničku školu Rade Končar na smeru Informacione Tehnologije. Težim ka tome da budem web developer/dev programer.</p>
                 </div>
             </div>
             <div>
-                <img src="../images/JapanD.jpg" alt="Japan" class="prijavaSideSlika sideD">
+                <img src="images/DrvceD.png" alt="Sakura" class="sideSlika">
             </div>
         </div>
-
 
         <div class="footer">
           <div class="footerHeader">
@@ -117,8 +94,9 @@
             <a href="kyoto.html">Kyoto</a>
             <a href="mountFuji.html">Mount Fuji</a>
             <a href="okinawa.html">Okinawa</a>
-            <a href="yokushima.html">Yakushima</a>
+            <a href="yakushima.html">Yakushima</a>
           </div>
+
 
             <div class="footerContact">
               <p>Ime: Filip</p>
@@ -140,8 +118,7 @@
 
 
     </div>
-
-    <script src="../js/js.js"></script>
+    <script src="js/js.js"></script>
 </body>
 </html>
 

@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informacije o Kyoto-u jednom od najvećih ostrva Japana</title>
-    <meta name="description" content="Istražite Kyoto, bivšu prestonicu Japana, poznatu po istorijskim hramovima, prelepim vrtovima i tradiciji. Otkrijte slike ovog kulturnog centra Japana, mesta bogate istorije i umetnosti." />
-
-    
+    <title>Stranica za prijavu za dobijanje obaveštenja o interesantnim akcijama koje mi pružamo</title>
+    <meta name="descripiton" content="Na ovoj stranici se možete prijaviti sa svojim imenom i porezimenom, brojem teleofna i email-om na koji će te posle dobijati obaveštenja o promocijama i akcijama koje mi organizujemo.">   
+     
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
     crossorigin="anonymous"></script>
@@ -17,14 +16,14 @@
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" href="../images/icon.jpg" alt="icon" />
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="images/icon.jpg" alt="icon" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
         <div class="header" id="header">
           
             <div>
-              <img src="../images/yingYang.png" alt="Logo sajta"  class="logo rot1">
+              <img src="images/yingYang.png" alt="Logo sajta"  class="logo rot1">
             </div>
   
             <div class="linkovi">
@@ -45,42 +44,61 @@
             </div>
 
             <div>
-              <img src="../images/yingYang.png" alt="Logo sajta" id="logo2" class="logo rot2">
+              <img src="images/yingYang.png" alt="Logo sajta" id="logo2" class="logo rot2">
             </div>
-
+            
             <div class="login">
               <button class="odjava" id="odjava">Odjava</button>
               <button class="logBtn" id="logBtn">Prijavi se</button>
               <i class="fa-regular fa-circle-user logIcon" id="logIcon"></i>
               <p class="logUser" id="logUser">Filip</p>
-            </div>`
+            </div>
           
         </div>
 
+        <div class="prijavaWrap">
+            <div>
+                <img src="images/JapanL.jpg" alt="Japan" class="prijavaSideSlika sideL">
+            </div>
+            <div class="prijavaMain">
+                <h1>Prijavite se da bi ste dobijali obaveštenja</h1>
+                <div class="prijavaMainDole">
+                    <p>Nakom prijave vi će te dobijati email-ove i poruke o specijalnim promocijama i akcijama.</p>
+                    <div class="formDiv">
+                      <div class="opis"> 
+                        <ul>
+                          <li><p class="opisNav">Sta možete očekivati:</p></li>
+                          <li><p>Popusti na putovanja</p></li>
+                          <li><p>Zanimljive ponude</p></li>
+                          <li><p>Interesantni obilasci</p></li>
+                        </ul>
+                      </div>
+                        <form action="index.php" method="get">
+                              <div class="prijavaCol">
+                                <label for="ime">Ime: </label>
+                                <input type="text" name="ime" id="ime" required="required">
 
-        
-        <div class="miniGalerijaWrap">
-          <div class="miniGalerijaText">
-              <h1>Kyoto</h1>
-              <p>Kyoto je bivša prestonica Japana, poznata po očuvanoj tradiciji i brojnim istorijskim spomenicima. Grad je domaćin mnogim hramovima, vrtovima i palatama, uključujući zlatni paviljon. Kyoto je centar japanske kulture, umetnosti i festivala, pružajući posetiocima mirnu atmosferu i uvid u bogatu prošlost Japana.</p>
-          </div>
-          <div class="miniGalerijaSlike">
-            <div class="red">
-              <img src="../images/kyoto/kyoto1.jpg" alt="Kyoto" class="miniGalerijaSlika">
-              <img src="../images/kyoto/kyoto2.jpg" alt="Kyoto" class="miniGalerijaSlika">
-              <img src="../images/kyoto/kyoto3.jpg" alt="Kyoto" class="miniGalerijaSlika">
-              <img src="../images/kyoto/kyoto4.jpg" alt="Kyoto" class="miniGalerijaSlika">
+                                <label for="prezime">Prezime: </label>
+                                <input type="text" name="prezime" id="prezime" required="required">
+    
+                                
+                                <label for="email">Email: </label>
+                                <input type="email" name="email" id="email" required="required">
+                                
+                                <label for="telefon">Broj telefona: </label>
+                                <input type="tel" name="telefon" id="telefon" class="telefon" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required="required">
+                              </div>
+                            <input type="submit" name="submit" id="submit" class="submit">
+
+                        </form>
+                    </div>
+
+                </div>
             </div>
-            <div class="red">
-              <img src="../images/kyoto/kyoto5.jpg" alt="Kyoto" class="miniGalerijaSlika">
-              <img src="../images/kyoto/kyoto6.jpg" alt="Kyoto" class="miniGalerijaSlika">
-              <img src="../images/kyoto/kyoto7.jpg" alt="Kyoto" class="miniGalerijaSlika">
-              <img src="../images/kyoto/kyoto8.jpg" alt="Kyoto" class="miniGalerijaSlika">
+            <div>
+                <img src="images/JapanD.jpg" alt="Japan" class="prijavaSideSlika sideD">
             </div>
-          </div>
         </div>
-
-
 
 
         <div class="footer">
@@ -99,9 +117,8 @@
             <a href="kyoto.html">Kyoto</a>
             <a href="mountFuji.html">Mount Fuji</a>
             <a href="okinawa.html">Okinawa</a>
-            <a href="yakushima.html">Yakushima</a>
+            <a href="yokushima.html">Yakushima</a>
           </div>
-
 
             <div class="footerContact">
               <p>Ime: Filip</p>
@@ -115,7 +132,7 @@
               <div class="red">
                 <a href="https://www.instagram.com/japandailies/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.facebook.com/JapanGov/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://sr.wikipedia.org/sr-ec/%D0%88%D0%B0%D0%BF%D0%B0%D0%BD"><i class="fa-brands fa-wikipedia-w" target="_blank"></i></a>
+                <a href="https://sr.wikipedia.org/sr-ec/%D0%88%D0%B0%D0%BF%D0%B0%D0%BD" target="_blank"><i class="fa-brands fa-wikipedia-w" ></i></a>
               </div>
             </div>
         </div>
@@ -123,7 +140,8 @@
 
 
     </div>
-    <script src="../js/js.js"></script>
+
+    <script src="js/js.js"></script>
 </body>
 </html>
 
