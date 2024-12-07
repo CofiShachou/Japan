@@ -7,6 +7,10 @@ let pomerajNaGore=visinaHeadera-visinaEkrana+20;
 
 
 $("#theme").click(()=>{
+    if(localStorage.getItem("theme")==null)
+    {
+        localStorage.setItem("theme","light");
+    }
     if(localStorage.getItem("theme")=="" || localStorage.getItem("theme")=="light")
     {
         localStorage.setItem("theme","dark");
