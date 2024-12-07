@@ -6,6 +6,24 @@ let visinaEkrana=$("#latice").height();
 let pomerajNaGore=visinaHeadera-visinaEkrana+20;
 
 
+$("#theme").click(()=>{
+    if(localStorage.getItem("theme")=="" || localStorage.getItem("theme")=="light")
+    {
+        localStorage.setItem("theme","dark");
+        $("body").css("--primary1","#534859");
+        $("body").css("--secondary1","#534859");
+        $("body").css("--secondary2","#FBD0D0");
+    }
+    else if(localStorage.getItem("theme")=="dark")
+        {
+            localStorage.setItem("theme","light");
+            $("body").css("--primary1","#FBD0D0");
+            $("body").css("--primary2","#FBF0E8");
+            $("body").css("--secondary1","#F9688D");
+            $("body").css("--secondary2","#534859");
+        }
+})
+
 //////////////////// ⁡⁢⁣⁡⁢⁣⁣Mini Galerije⁡⁡⁡    ///////////////////
 $(".miniGalerijaWrap").css("margin-top",visinaHeadera+40);
 
@@ -66,6 +84,21 @@ window.addEventListener('load', function () {
             $("#logUser").css("display","block")
             $("#odjava").css("display","block")
         }
+
+
+        if(localStorage.getItem("theme")=="light")
+            {
+                $("body").css("--primary1","#FBD0D0");
+                $("body").css("--primary2","#FBF0E8");
+                $("body").css("--secondary1","#F9688D");
+                $("body").css("--secondary2","#534859");
+            }
+            else{
+                $("body").css("--primary1","#534859");
+                $("body").css("--secondary1","#534859");
+                $("body").css("--secondary2","#FBD0D0");
+            }
+     
 });
 
 

@@ -152,6 +152,9 @@ body {
 
 .logo{
     width: 70px;
+    background-color: #534859;
+    border-radius: 52%;
+    border: 1px solid #534859;
 }
 .rot1{
     animation: rotate1 13s infinite;
@@ -180,7 +183,9 @@ input{
 }
 
 
-
+.theme{
+    cursor: pointer;
+}
 .linkovi{
     display: flex;
     gap: 20px;
@@ -191,7 +196,7 @@ input{
     border-radius: 50px;
     /* background-color: var(--secondary1); */
 }
-.linkovi a{
+.linkovi a,.linkovi i{
     color: var(--primary1);
     font-size: 25px;
     display: flex;
