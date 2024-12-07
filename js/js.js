@@ -7,10 +7,7 @@ let pomerajNaGore=visinaHeadera-visinaEkrana+20;
 
 
 $("#theme").click(()=>{
-    if(localStorage.getItem("theme")==null)
-    {
-        localStorage.setItem("theme","light");
-    }
+    
     if(localStorage.getItem("theme")=="" || localStorage.getItem("theme")=="light")
     {
         localStorage.setItem("theme","dark");
@@ -76,7 +73,10 @@ window.addEventListener('load', function () {
             window.scrollTo(0,0);
             // $(".mainPanel").css("opacity","0");
         }
-
+        if(localStorage.getItem("theme")==null)
+            {
+                localStorage.setItem("theme","light");
+            }
         if (localStorage.getItem("username") === null) {
             localStorage.setItem("username", ""); 
         }
